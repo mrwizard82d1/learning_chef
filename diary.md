@@ -87,3 +87,31 @@ I think I'll try the same provisioner but redirecting I/O.
 
 	config.vm.provision "shell", path: "install_chef_solo.sh"
 
+Hmmm. These changes failed to suppress the "progress dots" used by
+`wget`. Time to do more Googling.
+
+### Research wget options
+
+Found a page describing all the options for `wget`
+(http://www.gnu.org/software/wget/manual/html_node/Download-Options.html). Discovered
+the `--quiet` option and the `--output-file=logfile` option. Let's try
+the logfile option first.
+
+Hmmm. Still get the _stdin: is not a tty_ message; however, I **do
+not** see the progress dots. I do, still, however, need to wait
+patiently. :)
+
+Hmmm. Now I get an error: _install_chef_solo.log.txt_: No such file or
+directory when trying to display it. Very close. I'll try piping it to
+`/vagrant/install_chef_solo.log.txt` instead since that is a shared
+location.
+
+Argh! A trailing _._ when specifying the output file. Try again. I
+know it'll work this time.
+
+It's working!
+
+Duh. DRY. Eventually I'll learn.
+
+
+
