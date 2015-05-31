@@ -1,3 +1,7 @@
+# Ignore .vagrant directory
+.vagrant/
+
+# Standard ruby ignores.
 *.gem
 *.rbc
 /.config
