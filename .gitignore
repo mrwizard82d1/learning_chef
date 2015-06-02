@@ -4,6 +4,9 @@
 # Ignore installation log file.
 install_chef_solo.log.txt
 
+# Ignore kitchen instance files.
+.kitchen
+
 # Standard ruby ignores.
 *.gem
 *.rbc
