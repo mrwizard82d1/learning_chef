@@ -1,2 +1,3 @@
 # learning_chef
-Code from the book, "Learning Chef."
+
+Source code from the book, "Learning Chef."

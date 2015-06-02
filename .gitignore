@@ -1,3 +1,10 @@
+# Ignore .vagrant directory
+.vagrant/
+
+# Ignore installation log file.
+install_chef_solo.log.txt
+
+# Standard ruby ignores.
 *.gem
 *.rbc
 /.config
