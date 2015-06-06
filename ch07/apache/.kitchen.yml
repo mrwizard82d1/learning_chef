@@ -10,6 +10,8 @@ platforms:
     driver:
       box: learningchef/centos65
       box_url: learningchef/centos65
+      network:
+        - ["private_network", {ip: "192.168.33.7"}]
 
 suites:
   - name: default
