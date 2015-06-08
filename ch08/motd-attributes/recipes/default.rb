@@ -19,7 +19,9 @@ node.default['motd-attributes']['message'] =
 
 
 # Include other recipes (which may, in turn, define attributes).
+pp node.debug_value('motd-attributes', 'company')
 include_recipe 'motd-attributes::_message'
+pp node.debug_value('motd-attributes', 'company')
 
 
 template '/etc/motd' do
